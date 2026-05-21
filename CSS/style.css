@@ -209,8 +209,9 @@ header {
 
 /* HAMBURGER LINES */
 /* PROFESSIONAL HAMBURGER */
+/* PROFESSIONAL HAMBURGER */
 .hamburger{
-    display: none;
+    display: flex;
 
     flex-direction: column;
     justify-content: center;
@@ -228,7 +229,7 @@ header {
 
     padding: 0;
 
-    transition: 0.3s ease;
+   
 }
 
 /* HAMBURGER LINES */
@@ -236,11 +237,11 @@ header {
     width: 26px;
     height: 3px;
 
-    background-color: white;
+    background-color: rgb(97, 21, 184);
 
     border-radius: 20px;
 
-    transition: 0.3s ease;
+   
 }
 
 /* HOVER EFFECT */
@@ -248,14 +249,6 @@ header {
     background-color: var(--color-primary);
 }
 
-/* MOBILE ONLY */
-@media (max-width: 768px){
-
-    .hamburger{
-        display: flex;
-    }
-
-}
 
 /* THE BOTTOM BAR (FOOTER) */
 footer {
