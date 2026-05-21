@@ -180,7 +180,7 @@ header {
 /* HAMBURGER MENU */
 /* HAMBURGER */
 .hamburger{
-    display: flex; /* ALWAYS VISIBLE */
+    display: none;
 
     flex-direction: column;
     justify-content: center;
@@ -188,39 +188,73 @@ header {
 
     gap: 6px;
 
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
 
     cursor: pointer;
 
     border: 2px solid var(--color-primary);
-    border-radius: 10px;
+    border-radius: 8px;
 
     background: rgba(255,255,255,0.08);
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    transform: translateY(-50%);
+
+    z-index: 2000;
+}
+
+/* HAMBURGER LINES */
+/* PROFESSIONAL HAMBURGER */
+.hamburger{
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    width: 44px;
+    height: 44px;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    padding: 0;
 
     transition: 0.3s ease;
 }
 
-/* HOVER EFFECT */
-.hamburger:hover{
-    background: var(--color-primary);
-}
-
 /* HAMBURGER LINES */
 .hamburger span{
-    width: 28px;
+    width: 26px;
     height: 3px;
 
-    background: var(--color-primary);
+    background-color: white;
 
     border-radius: 20px;
 
     transition: 0.3s ease;
 }
 
-/* CHANGE LINE COLOR ON HOVER */
+/* HOVER EFFECT */
 .hamburger:hover span{
-    background: white;
+    background-color: var(--color-primary);
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px){
+
+    .hamburger{
+        display: flex;
+    }
+
 }
 
 /* THE BOTTOM BAR (FOOTER) */
