@@ -482,3 +482,10 @@ footer div {
 .mb-8 { margin-bottom: 4rem; }
 .mt-2 { margin-top: 1rem; }
 .btn-block { width: 100%; }
+
+.sports-video {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 15px;
+}

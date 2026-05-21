@@ -80,25 +80,36 @@
   <!-- MAIN: The main middle part of the page -->
   <main>
     <!-- SECTION: A big block with the background video -->
-    <section class="hero_section" aria-label="Welcome Section">
-      <!-- VIDEO: The background video that plays automatically -->
-      <video class="hero-video" autoplay loop muted playsinline aria-hidden="true" tabindex="-1">
-        <source src="../VIDEO/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <!-- SECTION: A big block of content -->
+<section class="hero_section" aria-label="Welcome Section">
 
-      <!-- HERO OVERLAY: A dark filter over the video to make text readable -->
-      <div class="hero-overlay"></div>
+  <!-- YOUTUBE BACKGROUND VIDEO -->
+  <iframe
+    class="hero-video"
+    src="https://www.youtube.com/embed/jSmFbXQxRmI?autoplay=1&mute=1&loop=1&playlist=jSmFbXQxRmI&controls=0&showinfo=0&modestbranding=1"
+    title="Sports Background Video"
+    allow="autoplay; fullscreen"
+    allowfullscreen>
+  </iframe>
 
-      <!-- HERO CONTENT: The big title and button in the middle -->
-      <div class="hero-content">
-        <!-- H1: The most important title on the page -->
-        <h1>Welcome to SRC Sports Academy of Pentecost University</h1>
-        <!-- P: A short paragraph about the academy -->
-        <p>Empowering students and the community through sports excellence, teamwork, and dedication.</p>
-        <a href="../HTML/Bookingpage.html" class="btn btn-primary">Book Your Session</a>
-      </div>
-    </section>
+  <!-- DARK OVERLAY -->
+  <div class="hero-overlay"></div>
+
+  <!-- HERO CONTENT -->
+  <div class="hero-content">
+    <h1>Welcome to SRC Sports Academy of Pentecost University</h1>
+
+    <p>
+      Empowering students and the community through sports excellence,
+      teamwork, and dedication.
+    </p>
+
+    <a href="Bookingpage.html" class="btn btn-primary">
+      Book Your Session
+    </a>
+  </div>
+
+</section>
 
     <!-- SECTION: A container for all the sports boxes -->
     <section class="container" aria-labelledby="sports-heading">
@@ -222,15 +233,28 @@
     </section>
 
     <!-- SECTION: Media box for video highlights -->
-    <section class="container info-card">
-      <h2 class="section-title">Latest Sports Media</h2>
-      <div class="searchable text-center mt-2 video-wrapper">
-        <p class="mb-2">Watch the latest highlights and news from the global sports community.</p>
-        <video controls autoplay loop muted playsinline aria-hidden="true" tabindex="-1">
-          <source src="../VIDEO/video.mp4" type="video/mp4">
-        </video>
-      </div>
-    </section>
+    <!-- SECTION: Media box for the video highlights -->
+<section class="container info-card">
+
+  <h2 class="section-title">Latest Sports Media</h2>
+
+  <div class="searchable text-center mt-2 video-wrapper">
+
+    <p class="mb-2">
+      Watch the latest highlights and news from the global sports community.
+    </p>
+
+    <iframe
+      class="sports-video"
+      src="https://www.youtube.com/embed/jSmFbXQxRmI?autoplay=1&mute=1&loop=1&playlist=jSmFbXQxRmI&controls=0&showinfo=0&modestbranding=1"
+      title="Sports Video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+</section>
   </main>
 
   <!-- FOOTER: The dark bar at the bottom of the page -->
