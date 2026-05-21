@@ -177,19 +177,50 @@ header {
   width: 150px;
 }
 
-/* THE MENU ICON FOR PHONES */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+/* HAMBURGER MENU */
+/* HAMBURGER */
+.hamburger{
+    display: flex; /* ALWAYS VISIBLE */
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    transition: 0.3s ease;
 }
 
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: var(--color-primary);
+/* HOVER EFFECT */
+.hamburger:hover{
+    background: var(--color-primary);
+}
+
+/* HAMBURGER LINES */
+.hamburger span{
+    width: 28px;
+    height: 3px;
+
+    background: var(--color-primary);
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+/* CHANGE LINE COLOR ON HOVER */
+.hamburger:hover span{
+    background: white;
 }
 
 /* THE BOTTOM BAR (FOOTER) */
