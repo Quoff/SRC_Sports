@@ -1,0 +1,155 @@
+﻿<!-- DOCTYPE: Tells the browser this is a modern website -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD: Holds hidden info like links to styles and scripts -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About SRC Sports Academy - Mission, vision, and funding.">
+  
+  <!-- TITLE: The name of the page on the browser tab -->
+  <title>SRC Sports Academy | About Us</title>
+  
+  <!-- CSS LINK: Connects to the style file for colors and fonts -->
+  <link rel="stylesheet" href="../CSS/style.css">
+  
+  <!-- SCRIPTS: Makes the search bar and counter work -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="../JS/script.js" defer></script>
+</head>
+
+<!-- BODY: The visible part of the website -->
+<body>
+
+  <!-- HEADER: The top bar with the menu and logo -->
+  <header>
+    <!-- DIV: A box used to group things together -->
+    <div class="container navbar">
+      <!-- LOGO: Click to return to home -->
+      <div class="logo">
+        <a href="../HTML/Homepage.html">SRC <span>Sports Academy</span></a>
+      </div>
+      
+      <!-- SEARCH: A box for typing to find text -->
+      <div class="search-container">
+        <!-- INPUT: The typing box -->
+        <input type="text" id="searchInput" placeholder="Search..." aria-label="search">
+        <span aria-hidden="true">🔍</span>
+      </div>
+
+      <!-- NAV: The list of links to other pages -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- A: Clickable links -->
+        <a href="../HTML/Homepage.html">Home</a>
+        <a href="../HTML/Aboutpage.html" class="active">About</a>
+        <a href="../HTML/Activitypage.html">Activities</a>
+        <a href="../HTML/Achievementpage.html">Achievements</a>
+        <a href="../HTML/Blogpage.html">Blog</a>
+        <a href="../HTML/coachespage.html">Coaches</a>
+        <a href="../HTML/Eventpage.html">Events</a>
+        
+        <!-- MOBILE SEARCH: Only for phones -->
+        <div class="search-container d-none" id="mobileSearch">
+            <input type="text" id="mobileSearchInput" placeholder="Search...">
+        </div>
+        
+        <!-- BUTTONS: Links styled as big buttons -->
+        <a href="../HTML/Bookingpage.html" class="btn btn-primary text-primary">Book Now</a>
+        <a href="../HTML/Registerpage.html" class="btn btn-secondary">Register</a>
+      </nav>
+
+      <!-- HAMBURGER: The menu icon for small screens -->
+      <div class="hamburger" aria-label="Toggle Navigation" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN: The middle part where the actual information is -->
+  <main>
+    <!-- SECTION: A big container for a topic like 'About Us' -->
+    <section class="container">
+      <!-- H1: The biggest title on this page -->
+      <h1 class="section-title">About SRC Sports Academy</h1>
+      
+      <!-- GRID CONTAINER: Lines up the cards in a row -->
+      <div class="grid-container">
+        
+        <!-- MISSION CARD: A box with info about our mission -->
+        <div class="searchable info-card">
+          <!-- IMG: A picture for the mission section -->
+          <img src="../IMAGE/football.jpg" alt="Athletes competing" class="card-img mb-2">
+          <!-- H2: A big title for this card -->
+          <h2>Our Mission</h2>
+          <!-- P: Paragraph text explaining the mission -->
+          <p>To enhance Pentecost University's reputation while promoting sports development within the university and the surrounding community. We strive to create an inclusive environment where students and community members can excel in various sports disciplines.</p>
+        </div>
+
+        <!-- VISION CARD -->
+        <div class="searchable info-card">
+          <img src="../IMAGE/volleyball1.jpg" alt="Teamwork and vision" class="card-img mb-2">
+          <h2>Our Vision</h2>
+          <p>To evolve into a leading regional sports institution recognized for excellence, innovation, and community engagement. We aim to attract sponsorships, foster external partnerships, and build a strong alumni network.</p>
+        </div>
+
+        <!-- FUNDING CARD -->
+        <div class="searchable info-card">
+          <img src="../IMAGE/football1.jpg" alt="Support and funding" class="card-img mb-2">
+          <h2>Funding & Support</h2>
+          <p>The SRC Sports Academy is proudly supported through a combination of university allocations, SRC funds, and generous contributions from local community businesses and national sports bodies. This funding allows us to offer state-of-the-art facilities and expand our programs.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: The dark bar at the bottom of the page -->
+  <footer>
+    <div class="container footer-grid">
+      <!-- INFO COLUMN -->
+      <div class="footer-col">
+        <!-- H4: A small heading for the column -->
+        <h4>SRC Sports Academy</h4>
+        <p>Promoting sports development within the university and surrounding community.</p>
+      </div>
+
+      <!-- LINKS COLUMN -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <!-- UL & LI: A list of links -->
+        <ul>
+          <li><a href="../HTML/Aboutpage.html">About Us</a></li>
+          <li><a href="../HTML/Activitypage.html">Our Programs</a></li>
+          <li><a href="../HTML/Achievementpage.html">Our Achievements</a></li>
+          <li><a href="../HTML/Eventpage.html">Upcoming Events</a></li>
+          <li><a href="../HTML/Bookingpage.html">Book Online</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL MEDIA COLUMN -->
+      <div class="footer-col">
+        <h4>Connect With Us</h4>
+        <div class="social-links">
+          <!-- Social media icons as images -->
+          <a href="#"><img src="../IMAGE/Facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="../IMAGE/Instagram.jpg" alt="Instagram"></a>
+          <a href="#"><img src="../IMAGE/Youtube.jpg" alt="YouTube"></a>
+          <a href="#"><img src="../IMAGE/Twitter.jpg" alt="Twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR: Copyright and counter -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SRC Sports Academy. All rights reserved.</p>
+      <div class="visitor-counter">
+        Page Visits: <span id="visitorCountDisplay">Loading...</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

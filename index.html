@@ -1,0 +1,219 @@
+<!-- ##########################################################################
+     WEBSITE DESIGN BY KOFI BAFFOE ACQUAH 
+     ID: PUIT24110017
+     COURSE: WEB FUNDAMENTALS
+     PROGRAMME: INFORMATION TECHNOLOGY
+     ########################################################################## -->
+
+<!-- DOCTYPE: This tells the computer that this is a modern website -->
+<!DOCTYPE html>  
+
+<!-- HTML: This is the main container for the entire website -->
+<html lang="en">
+
+<!-- HEAD: This part holds secret info like the title and style links (not visible on the page) -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SRC Sports Academy - Empowering students and the community through sports excellence.">
+  <meta name="keyword" content="SRC Sport Academy">
+  <meta name="Author" content="Kofi Baffoe Acquah">
+  
+  <!-- TITLE: This is what you see on the browser tab -->
+  <title>SRC Sports Academy | Home</title>
+  
+  <!-- CSS LINK: This connects to the 'style.css' file to make the page look pretty with colors and fonts -->
+  <link rel="stylesheet" href="./CSS/style.css">
+  
+  <!-- SCRIPTS: These make the interactive parts like the search bar and visitor counter work -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./JS/script.js" defer></script>
+</head>
+
+<!-- BODY: Everything you see on the screen (text, images, videos) goes here -->
+<body>
+
+  <!-- HEADER: The white navigation bar at the top of the page -->
+  <header>
+    <!-- DIV: A box used to group elements together -->
+    <div class="container navbar">
+      
+      <!-- LOGO: The website name; click it to return to the homepage -->
+      <div class="logo">
+        <a href="Homepage.html">SRC <span>Sports Academy</span></a>
+      </div>
+      
+      <!-- SEARCH BAR: A box where people can type to find things -->
+      <div class="search-container">
+        <!-- INPUT: The actual box where you type text -->
+        <input type="text" id="searchInput" placeholder="Search...">
+        <!-- SPAN: Used for small items like this magnifying glass icon -->
+        <span aria-hidden="true">🔍</span>
+      </div>
+
+      <!-- NAV: The group of links that help people move between pages -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- A: These are clickable links -->
+        <a href="./HTML/Homepage.html" class="active">Home</a>
+        <a href="./HTML/Aboutpage.html">About</a>
+        <a href="./HTML/Activitypage.html">Activities</a>
+        <a href="./HTML/Achievementpage.html">Achievements</a>
+        <a href="./HTML/Blogpage.html">Blog</a>
+        <a href="./HTML/coachespage.html">Coaches</a>
+        <a href="./HTML/Eventpage.html">Events</a>
+        
+        <!-- MOBILE SEARCH: Only shows up on small phone screens -->
+        <div class="search-container d-none" id="mobileSearch">
+            <input type="text" id="mobileSearchInput" placeholder="Search...">
+        </div>
+        
+        <!-- ACTION BUTTONS: Big blue and gray buttons for booking or signing up -->
+        <a href="./HTML/Bookingpage.html" class="btn btn-primary text-primary">Book Now</a>
+        <a href="./HTML/Registerpage.html" class="btn btn-secondary">Register</a>
+      </nav>
+      
+      <!-- HAMBURGER: The three-line menu icon for mobile phones -->
+      <div class="hamburger" aria-label="Toggle Navigation" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { $(this).click(); event.preventDefault(); }">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN: The main part of the page that contains the actual information -->
+  <main>
+    
+    <!-- SECTION: A big block of content, like a container for a specific topic -->
+    <section class="hero_section" aria-label="Welcome Section">
+      <!-- VIDEO: A video file that plays automatically in the background -->
+      <video class="hero-video" autoplay loop muted playsinline aria-hidden="true" tabindex="-1">
+        <source src="./VIDEO/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- HERO OVERLAY: A dark filter over the video so the white text is easy to read -->
+      <div class="hero-overlay"></div>
+
+      <!-- HERO CONTENT: The big text and button in the middle of the screen -->
+      <div class="hero-content">
+        <!-- H1: The most important title on the entire page -->
+        <h1>Welcome to SRC Sports Academy of Pentecost University</h1>
+        <!-- P: A simple paragraph of text -->
+        <p>Empowering students and the community through sports excellence, teamwork, and dedication.</p>
+        <a href="Bookingpage.html" class="btn btn-primary">Book Your Session</a>
+      </div>
+    </section>
+
+    <!-- SECTION: A container for the sports cards -->
+    <section class="container" aria-labelledby="sports-heading">
+      <!-- H2: A big title for this specific section -->
+      <h2 id="sports-heading" class="section-title">Our Premier Sports</h2>
+      
+      <!-- GRID CONTAINER: A box that lines up the sports cards in a neat row -->
+      <div class="grid-container">
+        
+        <!-- FOOTBALL CARD: A box with an image and info about football -->
+        <div class="card searchable">
+          <!-- IMG: Shows a picture of the sport -->
+          <img src="./IMAGE/football1.jpg" alt="Football players in action" class="card-img">
+          <div class="card-content">
+            <!-- H3: A smaller title for the specific sport -->
+            <h3>Football</h3>
+            <p>Join SRC Academy football program to develop technical skills and tactical awareness.</p>
+          </div>
+        </div>
+
+        <!-- VOLLEYBALL CARD -->
+        <div class="card searchable">
+          <img src="./IMAGE/volleyball1.jpg" alt="Volleyball action over the net" class="card-img">
+          <div class="card-content">
+            <h3>Volleyball</h3>
+            <p>Experience the thrill of spikes and blocks with our new volleyball teams.</p>
+          </div>
+        </div>
+
+        <!-- MARTIAL ARTS CARD -->
+        <div class="card searchable">
+          <img src="./IMAGE/Taekwondo.jpg" alt="Taekwondo practice" class="card-img">
+          <div class="card-content">
+            <h3>Taekwondo & Judo</h3>
+            <p>Build discipline, focus, and strength through our martial arts programs.</p>
+          </div>
+        </div>
+
+        <!-- WRESTLING CARD -->
+        <div class="card searchable">
+          <img src="./IMAGE/Wrestling.jpg" alt="Wrestling match" class="card-img">
+          <div class="card-content">
+            <h3>Wrestling</h3>
+            <p>Build core strength, discipline, and defensive skills with our expert wrestling trainers.</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- SECTION: Media box for the video highlights -->
+    <section class="container info-card">
+      <h2 class="section-title">Latest Sports Media</h2>
+      <div class="searchable text-center mt-2 video-wrapper">
+        <p class="mb-2">Watch the latest highlights and news from the global sports community.</p>
+        <video controls autoplay loop muted playsinline aria-label="Sports Video">
+          <source src="./VIDEO/video.mp4" type="video/mp4">
+          Your browser doesn't support video.
+        </video>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: The dark bar at the very bottom of the website -->
+  <footer>
+    <!-- FOOTER GRID: Divides the footer into three columns -->
+    <div class="container footer-grid">
+      
+      <!-- ABOUT COLUMN -->
+      <div class="footer-col">
+        <!-- H4: A small title for the footer column -->
+        <h4>SRC Sports Academy</h4>
+        <p>Promoting sports development within the university and surrounding community.</p>
+      </div>
+
+      <!-- QUICK LINKS COLUMN -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <!-- UL & LI: A bullet-point list of clickable links -->
+        <ul>
+          <li><a href="Aboutpage.html">About Us</a></li>
+          <li><a href="Activitypage.html">Our Programs</a></li>
+          <li><a href="Achievementpage.html">Our Achievements</a></li>
+          <li><a href="Eventpage.html">Upcoming Events</a></li>
+          <li><a href="Bookingpage.html">Book Online</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL MEDIA COLUMN -->
+      <div class="footer-col">
+        <h4>Connect With Us</h4>
+        <div class="social-links">
+          <!-- These are images of social media icons -->
+          <a href="#"><img src="./IMAGE/Facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="./IMAGE/Instagram.jpg" alt="Instagram"></a>
+          <a href="#"><img src="./IMAGE/Youtube.jpg" alt="YouTube"></a>
+          <a href="#"><img src="./IMAGE/Tiktok.png" alt="Tiktok"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR: Shows the copyright and visitor count -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SRC Sports Academy. All rights reserved.</p>
+      <!-- VISITOR COUNTER: Shows how many people visited the page -->
+      <div class="visitor-counter">
+        Page Visits: <span id="visitorCountDisplay">Loading...</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

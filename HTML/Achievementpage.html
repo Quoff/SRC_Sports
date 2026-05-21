@@ -1,0 +1,253 @@
+﻿<!-- DOCTYPE: This tells the computer that this is a modern website -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD: This part holds secret info like the title and style links -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SRC Sports Academy Achievements - Our competition results, trophies, and success stories.">
+  
+  <!-- TITLE: This is what you see on the browser tab -->
+  <title>SRC Sports Academy | Achievements</title>
+
+  <!-- CSS LINK: This connects to the style file for colors and fonts -->
+  <link rel="stylesheet" href="../CSS/style.css">
+
+  <!-- SCRIPTS: These make the interactive parts like search and counter work -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="../JS/script.js" defer></script>
+</head>
+
+<!-- BODY: Everything you see on the screen goes here -->
+<body>
+
+  <!-- HEADER: The white bar at the top of the page -->
+  <header>
+    <!-- DIV: A box used to group things together -->
+    <div class="container navbar">
+      <!-- LOGO: Click it to go back to the homepage -->
+      <div class="logo">
+        <a href="../HTML/Homepage.html">SRC <span>Sports Academy</span></a>
+      </div>
+
+      <!-- SEARCH BOX: A place to type and find things on the page -->
+      <div class="search-container">
+        <!-- INPUT: The typing box -->
+        <input type="text" id="searchInput" placeholder="Search..." aria-label="Search">
+        <span aria-hidden="true">🔍</span>
+      </div>
+
+      <!-- NAV: The list of links to move between pages -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- A: Clickable links -->
+        <a href="../HTML/Homepage.html">Home</a>
+        <a href="../HTML/Aboutpage.html">About</a>
+        <a href="../HTML/Activitypage.html">Activities</a>
+        <a href="../HTML/Achievementpage.html" class="active">Achievements</a>
+        <a href="../HTML/Blogpage.html">Blog</a>
+        <a href="../HTML/coachespage.html">Coaches</a>
+        <a href="../HTML/Eventpage.html">Events</a>
+        
+        <!-- MOBILE SEARCH: Only for small phone screens -->
+        <div class="search-container d-none" id="mobileSearch">
+            <input type="text" id="mobileSearchInput" placeholder="Search...">
+        </div>
+        
+        <!-- ACTION BUTTONS: Big blue and gray buttons -->
+        <a href="../HTML/Bookingpage.html" class="btn btn-primary">Book Now</a>
+        <a href="../HTML/Registerpage.html" class="btn btn-secondary">Register</a>
+      </nav>
+
+      <!-- HAMBURGER: The menu icon for mobile phones -->
+      <div class="hamburger" aria-label="Toggle Navigation" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { $(this).click(); event.preventDefault(); }">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN: The main middle part of the page -->
+  <main>
+    <!-- SECTION: A big block for achievements and trophies -->
+    <section class="container">
+      <!-- H1: The biggest title on this page -->
+      <h1 class="section-title">Achievements &amp; Honours</h1>
+
+      <!-- TROPHY STATS BAR: Boxes that show big numbers -->
+      <div class="grid-container mb-8">
+        
+        <!-- TROPHIES BOX -->
+        <div class="info-card text-center searchable">
+          <h2 class="achievement-number">🏆 12</h2>
+          <!-- P: Small descriptive text -->
+          <p class="font-bold">Trophies Won</p>
+          <p>Inter-university and regional competitions since founding.</p>
+        </div>
+
+        <!-- MEDALS BOX -->
+        <div class="info-card text-center searchable">
+          <h2 class="achievement-number">🥇 34</h2>
+          <p class="font-bold">Medals Earned</p>
+          <p>Gold, silver, and bronze across all sports disciplines.</p>
+        </div>
+
+        <!-- QUALIFIERS BOX -->
+        <div class="info-card text-center searchable">
+          <h2 class="achievement-number">⭐ 6</h2>
+          <p class="font-bold">National Qualifiers</p>
+          <p>Athletes who have qualified for national-level competitions.</p>
+        </div>
+
+      </div>
+
+      <!-- RECENT RESULTS: A title for our latest wins -->
+      <h2 class="section-title">Recent Competition Results</h2>
+      
+      <!-- GRID CONTAINER: Rows of cards showing results -->
+      <div class="grid-container mb-8">
+
+        <!-- FOOTBALL RESULT CARD -->
+        <div class="card searchable">
+          <!-- IMG: A picture of the football victory -->
+          <img src="../IMAGE/football.jpg" alt="Football team celebrating" class="card-img">
+          <div class="card-content">
+            <!-- H3: Name of the victory -->
+            <h3>🥇 Inter-University Football League</h3>
+            <p class="blog-meta">March 2026 | Regional Championship</p>
+            <p>Our football team claimed first place in the regional inter-university league, defeating five other universities across the tournament.</p>
+          </div>
+        </div>
+
+        <!-- TAEKWONDO RESULT CARD -->
+        <div class="card searchable">
+          <img src="../IMAGE/Taekwondo.jpg" alt="Taekwondo athlete competing" class="card-img">
+          <div class="card-content">
+            <h3>🥈 National Taekwondo Open</h3>
+            <p class="blog-meta">February 2026 | National Level</p>
+            <p>Three of our Taekwondo athletes placed in the top five at the National Open, with one student earning silver in the under-70kg category.</p>
+          </div>
+        </div>
+
+        <!-- JUDO RESULT CARD -->
+        <div class="card searchable">
+          <img src="../IMAGE/judo2.jpg" alt="Judo match in progress" class="card-img">
+          <div class="card-content">
+            <h3>🥉 Regional Judo Championship</h3>
+            <p class="blog-meta">January 2026 | Regional Level</p>
+            <p>SRC Judo athletes earned two bronze medals at the Regional Championships, showcasing the rapid growth of our new Judo programme.</p>
+          </div>
+        </div>
+
+        <!-- VOLLEYBALL RESULT CARD -->
+        <div class="card searchable">
+          <img src="../IMAGE/volleyball1.jpg" alt="Volleyball team playing" class="card-img">
+          <div class="card-content">
+            <h3>🏅 Inaugural Volleyball Invitational</h3>
+            <p class="blog-meta">April 2026 | Inaugural Tournament</p>
+            <p>In their very first competitive outing, our new Volleyball team finished runner-up in the four-team invitational hosted by Pentecost University.</p>
+          </div>
+        </div>
+
+        <!-- GYMNASTICS RESULT CARD -->
+        <div class="card searchable">
+          <img src="../IMAGE/Gymnastics1.jpg" alt="Gymnast performing" class="card-img">
+          <div class="card-content">
+            <h3>🥇 University Gymnastics Gala</h3>
+            <p class="blog-meta">December 2025 | Internal Championship</p>
+            <p>Our gymnastics squad swept the top three positions at the annual University Gala, with outstanding floor routines earning a standing ovation.</p>
+          </div>
+        </div>
+
+        <!-- RUGBY RESULT CARD -->
+        <div class="card searchable">
+          <img src="../IMAGE/football1.jpg" alt="Rugby tackle" class="card-img">
+          <div class="card-content">
+            <h3>🥈 Greater Accra Rugby Sevens</h3>
+            <p class="blog-meta">November 2025 | Regional Level</p>
+            <p>The SRC Rugby Sevens team delivered a powerful season, finishing runners-up in the Greater Accra regional league after an unbeaten group stage.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SUCCESS STORIES: A section for student stories -->
+      <h2 class="section-title">Student Success Stories</h2>
+      <div class="mb-8">
+
+        <!-- STORY 1 BOX -->
+        <div class="info-card searchable">
+          <h2>Kwame Asante — Football</h2>
+          <p class="blog-meta">Level 300, BSc Information Technology</p>
+          <p>Kwame joined the SRC Football Academy in his first year. After two seasons of training and competing at the regional level, he was scouted and signed to a local Premier League development squad — all while maintaining a strong academic record.</p>
+        </div>
+
+        <!-- STORY 2 BOX -->
+        <div class="info-card searchable">
+          <h2>Abena Mensah — Gymnastics &amp; Ballet</h2>
+          <p class="blog-meta">Level 200, BSc Computer Science</p>
+          <p>Abena has represented the university at three national-level arts and gymnastics festivals. She now leads student workshops helping first-year students build core strength and discipline through movement.</p>
+        </div>
+
+        <!-- STORY 3 BOX -->
+        <div class="info-card searchable">
+          <h2>Emmanuel Ofori — Taekwondo</h2>
+          <p class="blog-meta">Level 400, BSc Electrical Engineering</p>
+          <p>Emmanuel started Taekwondo with zero experience in his first semester. By his final year, he holds a blue belt and competed at the National Open, finishing in the top five nationally in his weight category.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: The dark bar at the bottom -->
+  <footer>
+    <!-- FOOTER GRID: Columns for info and links -->
+    <div class="container footer-grid">
+      
+      <!-- INFO COLUMN -->
+      <div class="footer-col">
+        <h4>SRC Sports Academy</h4>
+        <p>Promoting sports development within the university and surrounding community.</p>
+      </div>
+      
+      <!-- LINKS COLUMN -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <!-- UL & LI: A bulleted list of links -->
+        <ul>
+          <li><a href="../HTML/Aboutpage.html">About Us</a></li>
+          <li><a href="../HTML/Activitypage.html">Our Programs</a></li>
+          <li><a href="../HTML/Achievementpage.html">Our Achievements</a></li>
+          <li><a href="../HTML/Eventpage.html">Upcoming Events</a></li>
+          <li><a href="../HTML/Bookingpage.html">Book Online</a></li>
+        </ul>
+      </div>
+      
+      <!-- SOCIAL MEDIA COLUMN -->
+      <div class="footer-col">
+        <h4>Connect With Us</h4>
+        <div class="social-links">
+          <!-- Images for social media links -->
+          <a href="#"><img src="../IMAGE/Facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="../IMAGE/Instagram.jpg" alt="Instagram"></a>
+          <a href="#"><img src="../IMAGE/Youtube.jpg" alt="YouTube"></a>
+          <a href="#"><img src="../IMAGE/Twitter.jpg" alt="Twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- COPYRIGHT BAR: Bottom of the footer -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SRC Sports Academy. All rights reserved.</p>
+      <!-- COUNTER: Shows visitor numbers -->
+      <div class="visitor-counter">
+        Page Visits: <span id="visitorCountDisplay">Loading...</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

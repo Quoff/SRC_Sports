@@ -1,0 +1,170 @@
+﻿<!-- DOCTYPE: Tells the browser this is a modern website -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD: Holds hidden info like links to CSS and JavaScript -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Upcoming events and fixtures at SRC Sports Academy.">
+  
+  <!-- TITLE: The name of the page on the browser tab -->
+  <title>SRC Sports Academy | Events</title>
+  
+  <!-- CSS LINK: Connects to the master style file for colors and fonts -->
+  <link rel="stylesheet" href="../CSS/style.css">
+  
+  <!-- SCRIPTS: Makes interactive things like the search and visitor counter work -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="../JS/script.js" defer></script>
+</head>
+
+<!-- BODY: Everything you see on the screen goes here -->
+<body>
+
+  <!-- HEADER: The white navigation bar at the top -->
+  <header>
+    <!-- DIV: A box used to group items together -->
+    <div class="container navbar">
+      <!-- LOGO: Click it to go back to the homepage -->
+      <div class="logo">
+        <a href="../HTML/Homepage.html">SRC <span>Sports Academy</span></a>
+      </div>
+      
+      <!-- SEARCH BOX: Type here to find events on the page -->
+      <div class="search-container">
+        <!-- INPUT: The actual typing box -->
+        <input type="text" id="searchInput" placeholder="Search...">
+        <span aria-hidden="true">🔍</span>
+      </div>
+
+      <!-- NAV: The group of links that help people move around -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- A: Clickable link items -->
+        <a href="../HTML/Homepage.html">Home</a>
+        <a href="../HTML/Aboutpage.html">About</a>
+        <a href="../HTML/Activitypage.html">Activities</a>
+        <a href="../HTML/Blogpage.html">Blog</a>
+        <a href="../HTML/coachespage.html">Coaches</a>
+        <a href="../HTML/Achievementpage.html">Achievements</a>
+        <a href="../HTML/Eventpage.html" class="active">Events</a>
+        
+        <!-- MOBILE SEARCH: Only for small phone screens -->
+        <div class="search-container d-none" id="mobileSearch">
+            <input type="text" id="mobileSearchInput" placeholder="Search...">
+        </div>
+        
+        <!-- BUTTONS: Links that look like big buttons -->
+        <a href="../HTML/Bookingpage.html" class="btn btn-primary text-primary">Book Now</a>
+        <a href="../HTML/Registerpage.html" class="btn btn-secondary">Register</a>
+      </nav>
+
+      <!-- HAMBURGER: The three-line menu icon for phones -->
+      <div class="hamburger" aria-label="Toggle Navigation" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN: The main middle part of the page -->
+  <main>
+    <!-- SECTION: A big block for the upcoming events list -->
+    <section class="container">
+      <!-- H1: The most important title on this page -->
+      <h1 class="section-title">Upcoming Events & Fixtures</h1>
+      
+      <!-- GRID CONTAINER: Lines up the event cards side-by-side -->
+      <div class="grid-container">
+        
+        <!-- EVENT CARD: A box with an image and info about an event -->
+        <div class="card searchable">
+          <!-- IMG: A picture for the event -->
+          <img src="../IMAGE/football1.jpg" alt="Football team huddle" class="card-img">
+          <div class="card-content">
+            <!-- H2: The name of the event -->
+            <h2>Inter-University Football League</h2>
+            <!-- P: Details like date, time, and location -->
+            <p><strong>Date:</strong> November 12, 2026 | <strong>Time:</strong> 3:00 PM</p>
+            <p><strong>Location:</strong> Main University Stadium</p>
+            <!-- STRONG: Makes specific text bold and important -->
+            <p class="mt-2">Our football team will be facing off against the regional champions. Come support the team!</p>
+          </div>
+        </div>
+  
+        <!-- EVENT CARD 2 -->
+        <div class="card searchable">
+          <img src="../IMAGE/Taekwondo1.jpg" alt="Martial arts training" class="card-img">
+          <div class="card-content">
+            <h2>Martial Arts Showcase</h2>
+            <p><strong>Date:</strong> November 20, 2026 | <strong>Time:</strong> 10:00 AM</p>
+            <p><strong>Location:</strong> Indoor Sports Complex</p>
+            <p class="mt-2">Watch our newly trained Judo and Taekwondo athletes demonstrate their skills in a series of exhibition matches.</p>
+          </div>
+        </div>
+  
+        <!-- EVENT CARD 3 -->
+        <div class="card searchable">
+          <img src="../IMAGE/Gymnastics2'.jpg" alt="Gymnastics display" class="card-img">
+          <div class="card-content">
+            <h2>Gymnastics & Ballet Gala</h2>
+            <p><strong>Date:</strong> December 5, 2026 | <strong>Time:</strong> 6:00 PM</p>
+            <p><strong>Location:</strong> University Auditorium</p>
+            <p class="mt-2">An elegant evening showcasing the grace and strength of our gymnastics and ballet students.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: The dark bar at the bottom of the page -->
+  <footer>
+    <!-- FOOTER GRID: Columns for info and links -->
+    <div class="container footer-grid">
+      <!-- INFO COLUMN -->
+      <div class="footer-col">
+        <!-- H4: A small heading for the column -->
+        <h4>SRC Sports Academy</h4>
+        <p>Promoting sports development within the university and surrounding community.</p>
+      </div>
+
+      <!-- LINKS COLUMN -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <!-- UL & LI: A bullet-point list of clickable links -->
+        <ul>
+          <li><a href="../HTML/Aboutpage.html">About Us</a></li>
+          <li><a href="../HTML/Activitypage.html">Our Programs</a></li>
+          <li><a href="../HTML/Achievementpage.html">Our Achievements</a></li>
+          <li><a href="../HTML/Eventpage.html">Upcoming Events</a></li>
+          <li><a href="../HTML/Bookingpage.html">Book Online</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL MEDIA COLUMN -->
+      <div class="footer-col">
+        <h4>Connect With Us</h4>
+        <div class="social-links">
+          <!-- Images of social media icons -->
+          <a href="#"><img src="../IMAGE/Facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="../IMAGE/Instagram.jpg" alt="Instagram"></a>
+          <a href="#"><img src="../IMAGE/Youtube.jpg" alt="YouTube"></a>
+          <a href="#"><img src="../IMAGE/Twitter.jpg" alt="Twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR: Copyright and counter -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SRC Sports Academy. All rights reserved.</p>
+      <div class="visitor-counter">
+        Page Visits: <span id="visitorCountDisplay">Loading...</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,484 @@
+/* 
+   ==========================================================================
+ 
+          The CSS CODE FOR THE WEBSITE PAGES (BY KOFI BAFFOE ACQUAH)
+  
+   ==========================================================================
+*/
+
+/* SITE COLORS AND SETTINGS */
+:root {
+  --color-primary: #08497e;         /* DEEP BLUE */
+  --color-secondary: #fdb813;       /* GOLDEN ORANGE */
+  --color-secondary-hover: #e09f0b; /* DARKER ORANGE */
+  --color-white: #ffffff;           /* WHITE */
+  --color-light-gray: #f4f4f9;      /* LIGHT GRAY */
+  --color-dark-text: #222222;       /* DARK TEXT */
+  --color-light-text: #555555;      /* LIGHT TEXT */
+  --color-footer-bg: #091744;       /* DARK FOOTER */
+
+  --font-main: 'Inter', sans-serif;
+
+  --max-width: 1200px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;      
+}
+
+/* BASIC PAGE RULES  CSS Code*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%; /* Fixes font scaling on mobile Chrome/Edge */
+  font-size: 12px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-light-gray);
+  color: var(--color-dark-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* BIG TITLES AND TEXT  CSS Code*/
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-light-text);
+}
+
+/* CLICKABLE LINKS  CSS Code*/
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* PICTURES   CSS Code*/
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+/* THE MAIN BOX THAT KEEPS CONTENT CENTERED   CSS Code*/
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* BIG CENTERED TITLES  CSS Code*/
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-secondary);
+  margin: 0.5rem auto 0;
+}
+
+/* SPACE BETWEEN BLOCKS  CSS Code*/
+section {
+  padding: var(--spacing-xl) 0;
+}
+
+/* THE TOP BAR (HEADER) CSS Code */
+header {
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  position: -webkit-sticky; /* Support for older Safari/Edge */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* THE NAVIGATION AREA CSS Code */
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.3rem 0;
+}
+
+/* THE LOGO CSS Code */
+.logo a {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.logo span {
+  color: var(--color-secondary);
+}
+
+/* THE LINKS CSS Code */
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.nav-links a {
+  font-weight: 600;
+}
+
+/* THE SEARCH BOX */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-light-gray);
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+}
+
+.search-container input {
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  width: 150px;
+}
+
+/* THE MENU ICON FOR PHONES */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+/* THE BOTTOM BAR (FOOTER) */
+footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-white) !important;
+  padding: var(--spacing-xl) 0 var(--spacing-md);
+}
+
+footer p, 
+footer h4, 
+footer span,
+footer div {
+  color: var(--color-white) !important;
+}
+
+/* THE FOOTER COLUMNS */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.footer-col h4 {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-col ul li a {
+  color: var(--color-white);
+}
+
+/* SOCIAL MEDIA ICONS */
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a img {
+  width: 30px;
+  height: 30px;
+}
+
+/* THE VERY BOTTOM LINE */
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* THE VISITOR COUNTER BOX */
+.visitor-counter {
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+/* CLICKABLE BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-align: center;
+  transition: var(--transition);
+}
+
+/* BLUE BUTTON */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white) !important;
+}
+
+/* WHITE BUTTON WITH OUTLINE */
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white) !important;
+}
+
+/* CALL TO ACTION BUTTONS DIFFERENTIATION */
+.hero-content .btn-primary,
+.nav-links .btn-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-secondary);
+  font-weight: 700;
+}
+.hero-content .btn-primary:hover,
+.nav-links .btn-primary:hover {
+  background-color: var(--color-secondary-hover);
+  border-color: var(--color-secondary-hover);
+  color: var(--color-white) !important;
+}
+
+/* CARDS AND BOXES */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+/* THE PICTURE AT THE TOP OF A CARD  CSS Code*/
+.card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: var(--spacing-lg);
+}
+
+/* FORMS (BOOKING AND REGISTER)  CSS Code*/
+.form-container {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+/* CHECKBOXES  CSS Code*/
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* SECURITY CHECK BOX  CSS Code*/
+.captcha-box {
+  background: var(--color-light-gray);
+  padding: 1rem;
+  border: 1px dashed #ccc;
+}
+
+/* HOMEPAGE VIDEO BANNER  CSS Code*/
+.hero_section {
+  position: relative;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-primary); /* Fallback color for Opera Mini/slow connections */
+  color: var(--color-white); /* Makes text white */
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1, 
+.hero-content p {
+  color: var(--color-white) !important;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 56, 101, 0.7);
+  z-index: 1;
+}
+
+/* THE VIDEO PLAYER BOX  CSS Code*/
+.video-wrapper video {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--border-radius);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ABOUT PAGE INFO CARDS  CSS Code*/
+.info-card {
+  background-color: var(--color-white);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ACHIEVEMENTS TROPHY NUMBERS  CSS Code*/
+.achievement-number {
+  font-size: 3rem;
+  color: var(--color-secondary);
+}
+
+/* COACHES PAGE PICTURES  CSS Code*/
+.coach-img {
+  object-position: top;
+}
+
+.coach-role {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+/* BLOG PAGE TEXT   CSS Code*/
+.blog-meta {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* COMMUNITY QUESTIONS SECTION  CSS Code*/
+.qa-section {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+}
+
+.qa-item {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* PHONE AND TABLET RULES  CSS Code*/
+@media (max-width: 992px) {
+  .hero-content h1 { font-size: 1.8rem; }
+}
+
+@media (max-width: 992px) {
+  .navbar { flex-wrap: wrap; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 1rem 0;
+  }
+  .nav-links.active { display: flex; }
+  .hamburger { display: flex; }
+  .search-container { display: none; }
+  .footer-bottom { flex-direction: column; }
+}
+
+/* QUICK SHORTCUT CLASSES  CSS Code*/
+.text-center { text-align: center; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 4rem; }
+.mt-2 { margin-top: 1rem; }
+.btn-block { width: 100%; }

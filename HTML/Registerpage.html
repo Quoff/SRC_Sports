@@ -1,0 +1,173 @@
+﻿<!-- DOCTYPE: Tells the computer this is a modern website -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD: Holds hidden info like links to CSS and JS -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register as a user at SRC Sports Academy.">
+  
+  <!-- TITLE: The name of the website on the browser tab -->
+  <title>SRC Sports Academy | Register</title>
+  
+  <!-- CSS LINK: Connects to the master style file for colors and fonts -->
+  <link rel="stylesheet" href="../CSS/style.css">
+  
+  <!-- SCRIPTS: Makes interactive things like search and form validation work -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="../JS/script.js" defer></script>
+</head>
+
+<!-- BODY: Everything you see on the screen goes here -->
+<body>
+
+  <!-- HEADER: The white navigation bar at the top -->
+  <header>
+    <!-- DIV: A box used to group items together -->
+    <div class="container navbar">
+      <!-- LOGO: Click to go back to the home page -->
+      <div class="logo">
+        <a href="../HTML/Homepage.html">SRC <span>Sports Academy</span></a>
+      </div>
+      
+      <!-- SEARCH BOX: Type to find text on this page -->
+      <div class="search-container">
+        <!-- INPUT: The typing box -->
+        <input type="text" id="searchInput" placeholder="Search...">
+        <span aria-hidden="true">🔍</span>
+      </div>
+
+      <!-- NAV: The group of links that help people move around -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- A: Clickable link items -->
+        <a href="../HTML/Homepage.html">Home</a>
+        <a href="../HTML/Aboutpage.html">About</a>
+        <a href="../HTML/Activitypage.html">Activities</a>
+        <a href="../HTML/Achievementpage.html">Achievements</a>
+        <a href="../HTML/Blogpage.html">Blog</a>
+        <a href="../HTML/coachespage.html">Coaches</a>
+        <a href="../HTML/Eventpage.html">Events</a>
+        
+        <!-- MOBILE SEARCH: Only for phones -->
+        <div class="search-container d-none" id="mobileSearch">
+            <input type="text" id="mobileSearchInput" placeholder="Search...">
+        </div>
+        
+        <!-- BUTTONS: Links styled as big buttons -->
+        <a href="../HTML/Bookingpage.html" class="btn btn-primary text-primary">Book Now</a>
+        <a href="../HTML/Registerpage.html" class="btn btn-secondary active">Register</a>
+      </nav>
+
+      <!-- HAMBURGER: The three-line menu icon for phones -->
+      <div class="hamburger" aria-label="Toggle Navigation" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN: The main middle part of the page -->
+  <main>
+    <!-- SECTION: A big container for the registration section -->
+    <section class="container">
+      <!-- H1: The most important title on this page -->
+      <h1 class="section-title">User Registration</h1>
+      
+      <!-- FORM CONTAINER: The white box holding the registration form -->
+      <div class="form-container">
+        <!-- FORM: A group of boxes used to collect user info -->
+        <form onsubmit="return validateForm(event)">
+          
+          <!-- NAME FIELD BOX -->
+          <div class="form-group">
+            <!-- LABEL: Text that names a specific input box -->
+            <label for="regName">Full Name</label>
+            <!-- INPUT: The actual box where you type your name -->
+            <input type="text" id="regName" required placeholder="Enter your full name">
+          </div>
+          
+          <!-- EMAIL FIELD BOX -->
+          <div class="form-group">
+            <label for="regEmail">Email Address</label>
+            <input type="email" id="regEmail" required placeholder="Enter your email">
+          </div>
+
+          <!-- PASSWORD FIELD BOX -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <!-- PASSWORD: A typing box that hides the letters you type -->
+            <input type="password" id="password" required placeholder="Create a password">
+          </div>
+          
+          <!-- CHECKBOX GROUP: A small box you can click to check or uncheck -->
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="newsletter" checked>
+            <label for="newsletter">Subscribe to newsletter</label>
+          </div>
+
+          <!-- SECURITY BOX: Prevents robots from creating accounts -->
+          <div class="form-group captcha-box">
+            <label for="captcha">Security Check (CAPTCHA)</label>
+            <!-- P: A small paragraph asking a question -->
+            <p id="captchaQuestion" class="mb-1 font-bold">What is 3 + 4?</p>
+            <input type="text" id="captcha" required placeholder="Enter the answer">
+          </div>
+          
+          <!-- SUBMIT BUTTON: Click this to create the account -->
+          <button type="submit" class="btn btn-secondary btn-block">Create Account</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: The dark bar at the bottom of the page -->
+  <footer>
+    <!-- FOOTER GRID: Columns for info and links -->
+    <div class="container footer-grid">
+      <!-- INFO COLUMN -->
+      <div class="footer-col">
+        <!-- H4: A small heading for the column -->
+        <h4>SRC Sports Academy</h4>
+        <p>Promoting sports development within the university and surrounding community.</p>
+      </div>
+
+      <!-- LINKS COLUMN -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <!-- UL & LI: A bullet-point list of clickable links -->
+        <ul>
+          <li><a href="../HTML/Aboutpage.html">About Us</a></li>
+          <li><a href="../HTML/Activitypage.html">Our Programs</a></li>
+          <li><a href="../HTML/Achievementpage.html">Our Achievements</a></li>
+          <li><a href="../HTML/Eventpage.html">Upcoming Events</a></li>
+          <li><a href="../HTML/Bookingpage.html">Book Online</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL MEDIA COLUMN -->
+      <div class="footer-col">
+        <h4>Connect With Us</h4>
+        <div class="social-links">
+          <!-- Images of social media icons -->
+          <a href="#"><img src="../IMAGE/Facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="../IMAGE/Instagram.jpg" alt="Instagram"></a>
+          <a href="#"><img src="../IMAGE/Youtube.jpg" alt="YouTube"></a>
+          <a href="#"><img src="../IMAGE/Twitter.jpg" alt="Twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR: Copyright and counter -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SRC Sports Academy. All rights reserved.</p>
+      <div class="visitor-counter">
+        Page Visits: <span id="visitorCountDisplay">Loading...</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
